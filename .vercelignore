@@ -1,0 +1,9 @@
+.env
+.env.local
+.env.*.local
+.chrome-tmp
+.shots
+.tools
+node_modules
+.next
+.git

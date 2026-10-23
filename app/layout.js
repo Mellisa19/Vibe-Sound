@@ -11,8 +11,11 @@ const bricolage_grotesque = Bricolage_Grotesque({
   weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
+const vercelHost =
+  process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL;
 const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (vercelHost ? `https://${vercelHost}` : "http://localhost:3000");
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
